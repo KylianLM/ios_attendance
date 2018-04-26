@@ -9,5 +9,12 @@ import Foundation
 
 struct ApiConstants {
     static let makeFake = true
-    static let baseApiUrl = NSURL(string: "http://www.perdu.com/")!
+
+    struct Url {
+        static let baseApi      = "http://www.perdu.com/api/"
+        static let login        = ApiConstants.Url.baseApi + "login"
+        static let refreshToken = ApiConstants.Url.baseApi + "refreshToken"
+        static let getLocation  = ApiConstants.Url.baseApi + "getLocation"
+        static let checkIn      = ApiConstants.Url.baseApi + "checkIn"
+    }
 }
