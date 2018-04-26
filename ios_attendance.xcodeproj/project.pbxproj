@@ -20,6 +20,7 @@
 		76305BC7D08E5E559D1FF82E /* Pods_ios_attendance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EF1AD81F1655B7F2A1A75B /* Pods_ios_attendance.framework */; };
 		B783323487D7273F52541DF6 /* Pods_ios_attendanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF95454D43E38A95361F231 /* Pods_ios_attendanceTests.framework */; };
 		5B64CA2920921ECC00C892F8 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CA2820921ECC00C892F8 /* ApiClient.swift */; };
+		5B64CA2B20926BA100C892F8 /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CA2A20926BA100C892F8 /* QRScannerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		7CF95454D43E38A95361F231 /* Pods_ios_attendanceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_attendanceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B9F1539F720048257274EA8 /* Pods-ios_attendanceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_attendanceUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios_attendanceUITests/Pods-ios_attendanceUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B64CA2820921ECC00C892F8 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		5B64CA2A20926BA100C892F8 /* QRScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 		5B64CA1D2092089600C892F8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5B64CA2A20926BA100C892F8 /* QRScannerController.swift */,
 				5B64C9F02091F5F200C892F8 /* ViewController.swift */,
 			);
 			path = Controllers;
@@ -434,6 +437,7 @@
 			files = (
 				5B64CA26209212E000C892F8 /* FakeApiData.swift in Sources */,
 				5B64C9F12091F5F200C892F8 /* ViewController.swift in Sources */,
+				5B64CA2B20926BA100C892F8 /* QRScannerController.swift in Sources */,
 				5B64CA212092093100C892F8 /* ApiConstants.swift in Sources */,
 				5B64C9EF2091F5F200C892F8 /* AppDelegate.swift in Sources */,
 				5B64CA2920921ECC00C892F8 /* ApiClient.swift in Sources */,
