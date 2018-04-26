@@ -8,5 +8,6 @@
 import Foundation
 
 struct ApiConstants {
+    static let makeFake = true
     static let baseApiUrl = NSURL(string: "http://www.perdu.com/")!
 }

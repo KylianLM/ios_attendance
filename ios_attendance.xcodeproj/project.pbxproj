@@ -15,6 +15,7 @@
 		5B64CA042091F5F300C892F8 /* ios_attendanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CA032091F5F300C892F8 /* ios_attendanceTests.swift */; };
 		5B64CA0F2091F5F300C892F8 /* ios_attendanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CA0E2091F5F300C892F8 /* ios_attendanceUITests.swift */; };
 		5B64CA212092093100C892F8 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CA202092093100C892F8 /* ApiConstants.swift */; };
+		5B64CA26209212E000C892F8 /* FakeApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CA25209212E000C892F8 /* FakeApiData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		5B64CA0E2091F5F300C892F8 /* ios_attendanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_attendanceUITests.swift; sourceTree = "<group>"; };
 		5B64CA102091F5F300C892F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B64CA202092093100C892F8 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
+		5B64CA25209212E000C892F8 /* FakeApiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeApiData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 		5B64CA2220920AEA00C892F8 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				5B64CA25209212E000C892F8 /* FakeApiData.swift */,
 				5B64CA202092093100C892F8 /* ApiConstants.swift */,
 			);
 			path = Constants;
@@ -299,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B64CA26209212E000C892F8 /* FakeApiData.swift in Sources */,
 				5B64C9F12091F5F200C892F8 /* ViewController.swift in Sources */,
 				5B64CA212092093100C892F8 /* ApiConstants.swift in Sources */,
 				5B64C9EF2091F5F200C892F8 /* AppDelegate.swift in Sources */,
