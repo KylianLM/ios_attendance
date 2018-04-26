@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Arcane
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print(Hash.SHA512("hello"))
     }
 
     override func didReceiveMemoryWarning() {
