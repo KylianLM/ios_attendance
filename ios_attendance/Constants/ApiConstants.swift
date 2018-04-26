@@ -12,9 +12,21 @@ struct ApiConstants {
 
     struct Url {
         static let baseApi      = "http://www.perdu.com/api/"
-        static let login        = ApiConstants.Url.baseApi + "login"
-        static let refreshToken = ApiConstants.Url.baseApi + "refreshToken"
-        static let getLocation  = ApiConstants.Url.baseApi + "getLocation"
-        static let checkIn      = ApiConstants.Url.baseApi + "checkIn"
+        struct login {
+            static let url      = ApiConstants.Url.baseApi + "login"
+            static let method   = "GET"
+        }
+        struct refreshToken {
+            static let url      = ApiConstants.Url.baseApi + "refreshToken"
+            static let method   = "GET"
+        }
+        struct getLocation {
+            static let url      = ApiConstants.Url.baseApi + "getLocation"
+            static let method   = "GET"
+        }
+        struct checkIn {
+            static let url      = ApiConstants.Url.baseApi + "checkIn"
+            static let method   = "POST"
+        }
     }
 }

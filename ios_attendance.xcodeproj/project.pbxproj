@@ -19,6 +19,7 @@
 		5B64CA26209212E000C892F8 /* FakeApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CA25209212E000C892F8 /* FakeApiData.swift */; };
 		76305BC7D08E5E559D1FF82E /* Pods_ios_attendance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EF1AD81F1655B7F2A1A75B /* Pods_ios_attendance.framework */; };
 		B783323487D7273F52541DF6 /* Pods_ios_attendanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF95454D43E38A95361F231 /* Pods_ios_attendanceTests.framework */; };
+		5B64CA2920921ECC00C892F8 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CA2820921ECC00C892F8 /* ApiClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		754CBD76DE833A4C23758C27 /* Pods_ios_attendanceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_attendanceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CF95454D43E38A95361F231 /* Pods_ios_attendanceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_attendanceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B9F1539F720048257274EA8 /* Pods-ios_attendanceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_attendanceUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios_attendanceUITests/Pods-ios_attendanceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B64CA2820921ECC00C892F8 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 		5B64C9ED2091F5F200C892F8 /* ios_attendance */ = {
 			isa = PBXGroup;
 			children = (
+				5B64CA2720921EB900C892F8 /* NotServices */,
 				5B64CA2220920AEA00C892F8 /* Constants */,
 				5B64CA1F209208B800C892F8 /* Views */,
 				5B64CA1E209208A900C892F8 /* Helpers */,
@@ -209,6 +212,14 @@
 				17783C5EE53E857087C8A097 /* Pods-ios_attendanceUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5B64CA2720921EB900C892F8 /* NotServices */ = {
+			isa = PBXGroup;
+			children = (
+				5B64CA2820921ECC00C892F8 /* ApiClient.swift */,
+			);
+			path = NotServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,6 +436,7 @@
 				5B64C9F12091F5F200C892F8 /* ViewController.swift in Sources */,
 				5B64CA212092093100C892F8 /* ApiConstants.swift in Sources */,
 				5B64C9EF2091F5F200C892F8 /* AppDelegate.swift in Sources */,
+				5B64CA2920921ECC00C892F8 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
