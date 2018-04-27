@@ -5,6 +5,7 @@
 //  Created by Kylian Le Mette on 26/04/2018.
 //  Copyright © 2018 Kylian Le Mette. All rights reserved.
 //
+//  Based on https://www.appcoda.com/barcode-reader-swift/
 
 import UIKit
 import AVFoundation
@@ -30,7 +31,6 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
     func initCamera(){
         let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes:[AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .back)
         
-        print(deviceDiscoverySession.devices)
         guard let captureDevice = deviceDiscoverySession.devices.first else {
             print("Failed to get the camera device")
             return
@@ -51,25 +51,28 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
             captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
             captureMetadataOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
             
-            videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-            videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-            videoPreviewLayer?.frame = view.layer.bounds
-            view.layer.addSublayer(videoPreviewLayer!)
-            
-            
-            captureSession.startRunning()
-            
-            view.bringSubview(toFront: messageLabel)
-            
-            qrCodeFrameView = UIView()
-            
-            // Create Green Square
-            if let qrCodeFrameView = qrCodeFrameView {
-                qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
-                qrCodeFrameView.layer.borderWidth = 2
-                view.addSubview(qrCodeFrameView)
-                view.bringSubview(toFront: qrCodeFrameView)
+            //DispatchQueue Main Thread to prevent crashes
+            DispatchQueue.main.async {
+                self.videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+                self.videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+                self.videoPreviewLayer?.frame = self.view.layer.bounds
+                self.view.layer.addSublayer(self.videoPreviewLayer!)
+                
+                captureSession.startRunning()
+                
+                self.view.bringSubview(toFront: self.messageLabel)
+                
+                self.qrCodeFrameView = UIView()
+                
+                // Create Green Square
+                if let qrCodeFrameView = self.qrCodeFrameView {
+                    qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
+                    qrCodeFrameView.layer.borderWidth = 2
+                    self.view.addSubview(qrCodeFrameView)
+                    self.view.bringSubview(toFront: qrCodeFrameView)
+                }
             }
+           
             
         } catch {
             // If any error occurs, simply print it out and don't continue any more.
@@ -95,7 +98,13 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-                messageLabel.text = metadataObj.stringValue
+                let api = ApiClient.sharedInstance
+                let task = api.postQRcode(data: metadataObj.stringValue!) { (data, res, err) in
+                    // DO SOMETHING !!!
+                }
+                task?.resume()
+                
+                messageLabel.text = "QR code detected"
             }
         }
     }
