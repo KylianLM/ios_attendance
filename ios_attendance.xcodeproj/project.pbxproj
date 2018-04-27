@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		53247C05A98465CC1E521C77 /* Pods_ios_attendanceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 754CBD76DE833A4C23758C27 /* Pods_ios_attendanceUITests.framework */; };
+		53D7F2D820930B4700CBE834 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D7F2D720930B4700CBE834 /* LoginController.swift */; };
 		5B64C9EF2091F5F200C892F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64C9EE2091F5F200C892F8 /* AppDelegate.swift */; };
 		5B64C9F12091F5F200C892F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64C9F02091F5F200C892F8 /* ViewController.swift */; };
 		5B64C9F42091F5F200C892F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B64C9F22091F5F200C892F8 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		23EF1AD81F1655B7F2A1A75B /* Pods_ios_attendance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_attendance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B8DC6FCFDAF6578EAD9978 /* Pods-ios_attendanceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_attendanceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios_attendanceTests/Pods-ios_attendanceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4D653A688067A0217C9BE2C6 /* Pods-ios_attendanceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_attendanceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios_attendanceTests/Pods-ios_attendanceTests.release.xcconfig"; sourceTree = "<group>"; };
+		53D7F2D720930B4700CBE834 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		5B64C9EB2091F5F200C892F8 /* ios_attendance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_attendance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B64C9EE2091F5F200C892F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B64C9F02091F5F200C892F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				5B64C9F02091F5F200C892F8 /* ViewController.swift */,
+				53D7F2D720930B4700CBE834 /* LoginController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				5B64C9F12091F5F200C892F8 /* ViewController.swift in Sources */,
 				5B64CA212092093100C892F8 /* ApiConstants.swift in Sources */,
 				5B64C9EF2091F5F200C892F8 /* AppDelegate.swift in Sources */,
+				53D7F2D820930B4700CBE834 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
