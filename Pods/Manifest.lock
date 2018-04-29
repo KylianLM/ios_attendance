@@ -1,0 +1,20 @@
+PODS:
+  - Arcane (1.2.1)
+  - KeychainAccess (3.1.1)
+
+DEPENDENCIES:
+  - Arcane
+  - KeychainAccess
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Arcane
+    - KeychainAccess
+
+SPEC CHECKSUMS:
+  Arcane: 870689a8ba7145a7dec0c2d7d7836b50c9f12636
+  KeychainAccess: 7bd430028059754a3debab3cfc0bd1fc7fb85df3
+
+PODFILE CHECKSUM: 46907a00e07e0810e5b6a28468b728a09e07b68b
+
+COCOAPODS: 1.5.0
