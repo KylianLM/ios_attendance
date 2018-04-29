@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		53247C05A98465CC1E521C77 /* Pods_ios_attendanceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 754CBD76DE833A4C23758C27 /* Pods_ios_attendanceUITests.framework */; };
+		53A49C3F209638070066BD89 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A49C3E209638070066BD89 /* checked.png */; };
 		53BAF910209619A4005E7BE3 /* BeaconService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BAF90F209619A4005E7BE3 /* BeaconService.swift */; };
 		53BAF9142096293F005E7BE3 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BAF9132096293F005E7BE3 /* LoginController.swift */; };
 		5B64C9EF2091F5F200C892F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64C9EE2091F5F200C892F8 /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 		23EF1AD81F1655B7F2A1A75B /* Pods_ios_attendance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_attendance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B8DC6FCFDAF6578EAD9978 /* Pods-ios_attendanceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_attendanceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios_attendanceTests/Pods-ios_attendanceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4D653A688067A0217C9BE2C6 /* Pods-ios_attendanceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_attendanceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios_attendanceTests/Pods-ios_attendanceTests.release.xcconfig"; sourceTree = "<group>"; };
+		53A49C3E209638070066BD89 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checked.png; path = ../../../../Downloads/checked.png; sourceTree = SOURCE_ROOT; };
 		53BAF90F209619A4005E7BE3 /* BeaconService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconService.swift; sourceTree = "<group>"; };
 		53BAF9132096293F005E7BE3 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		5B64C9EB2091F5F200C892F8 /* ios_attendance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_attendance.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +115,22 @@
 				754CBD76DE833A4C23758C27 /* Pods_ios_attendanceUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53A49C3A209637810066BD89 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				53A49C3B209637910066BD89 /* img */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		53A49C3B209637910066BD89 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				53A49C3E209638070066BD89 /* checked.png */,
+			);
+			path = img;
 			sourceTree = "<group>";
 		};
 		5B64C9E22091F5F200C892F8 = {
@@ -200,6 +218,7 @@
 		5B64CA1F209208B800C892F8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				53A49C3A209637810066BD89 /* assets */,
 				5B64C9F22091F5F200C892F8 /* Main.storyboard */,
 				5B64C9F72091F5F300C892F8 /* LaunchScreen.storyboard */,
 			);
@@ -346,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B64C9F92091F5F300C892F8 /* LaunchScreen.storyboard in Resources */,
+				53A49C3F209638070066BD89 /* checked.png in Resources */,
 				5B64C9F62091F5F300C892F8 /* Assets.xcassets in Resources */,
 				5B64C9F42091F5F200C892F8 /* Main.storyboard in Resources */,
 			);
