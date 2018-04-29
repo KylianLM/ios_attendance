@@ -14,9 +14,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let api = ApiClient.sharedInstance
-        api.postLogin(email: "kylian.le.mette@gmail.com", password: "hello")
-        
+        let us = UserService.sharedInstance
+        //us.storePassword(password: "test")
+        us.storePassword(password:"hello")
     }
 
     override func didReceiveMemoryWarning() {
