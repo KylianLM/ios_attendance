@@ -8,6 +8,7 @@ target 'ios_attendance' do
   # Pods for ios_attendance
   # pod 'CommonCryptoSwift', git: 'https://github.com/onmyway133/CommonCrypto.swift'
   pod 'Arcane'
+  pod 'KeychainAccess'
   target 'ios_attendanceTests' do
     inherit! :search_paths
     # Pods for testing
