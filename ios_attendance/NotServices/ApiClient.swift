@@ -20,7 +20,7 @@ class ApiClient {
     }
 
     func postLogin(email: String, password: String, handler: @escaping (Bool) -> Swift.Void) -> URLSessionDataTask {
-        let o: [String:String] = ["email": email, "token": Hash.SHA512(password)!]
+        let o: [String:String] = ["email": email, "password": Hash.SHA512(password)!]
         let u = URL(string: ApiConstants.Url.login.url)
         var request = URLRequest(url: u!)
         request.httpMethod = ApiConstants.Url.login.method
@@ -29,17 +29,21 @@ class ApiClient {
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Accept")
         
         return session.dataTask(with: request, completionHandler: { (data, res, err) in
-            if let d = data {
-                if let o = (try? JSONSerialization.jsonObject(with: d, options: [])) as? [String:String] {
-                    if o["token"] != nil {
-                        UserService.sharedInstance.storeToken(token: o["token"]!)
-                        handler(true)
-                    }
+            DispatchQueue.main.async {
+                if let d = data {
+                    do {
+                        if let o = (try JSONSerialization.jsonObject(with: d, options: [])) as? [String:String] {
+                            if (o["token"] != nil) {
+                                UserService.sharedInstance.storeToken(token: o["token"]!)
+                                handler(true)
+                            } else {
+                                handler(false)
+                            }
+                        }
+                    } catch _ {}
+                } else {
                     handler(false)
                 }
-                handler(false)
-            } else {
-                handler(false)
             }
         })
     }

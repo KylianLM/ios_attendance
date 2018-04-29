@@ -35,23 +35,29 @@ class LoginController: UIViewController {
     
     @IBAction func loginActionButton(_ sender: Any) {
         let nickname = self.nicknameInput.text
-        var password = self.passwordInput.text
+        let password = self.passwordInput.text
         
         if ((nickname?.isEmpty)! || (password?.isEmpty)!) {
             print("error")
             self.errorModal(title: "Login error", message: "an error occured please double check your nickname and password")
         }
         else {
-            password = Hash.SHA512(password!)
-            self.login(nickname: nickname, password: password)
+            self.login(nickname: nickname!, password: password!)
         }
     }
     
-    fileprivate func login (nickname: String?, password: String? ) {
-        //print(nickname)
-        //print(password)
-        
-        // TODO: Make Api request with nickname and password to the Login Api
-}
+    fileprivate func login (nickname: String, password: String) {
+        let task = ApiClient.sharedInstance.postLogin(email: nickname, password: password) { (b) in
+            if b {
+                UserService.sharedInstance.storePassword(password: password)
+                if let next = self.storyboard?.instantiateViewController(withIdentifier: "qrCode") as? QRScannerController {
+                    self.navigationController?.pushViewController(next, animated: true)
+                }
+            } else {
+                self.errorModal(title: "Login error", message: "an error occured please double check your nickname and password")
+            }
+        }
+        task.resume()
+    }
 
 }
