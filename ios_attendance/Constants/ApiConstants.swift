@@ -8,10 +8,10 @@
 import Foundation
 
 struct ApiConstants {
-    static let makeFake = false
+    //static let makeFake = false
 
     struct Url {
-        static let baseApi      = "http://www.perdu.com/api/"
+        static let baseApi      = "http://www.attendance.com/api/"
         struct login {
             static let url      = ApiConstants.Url.baseApi + "login"
             static let method   = "GET"
@@ -25,8 +25,8 @@ struct ApiConstants {
             static let method   = "GET"
         }
         struct checkIn {
-            static let url      = "http://www.perdu.com/"
-            static let method   = "GET"
+            static let url      = ApiConstants.Url.baseApi + "checkIn"
+            static let method   = "POST"
         }
     }
 }
