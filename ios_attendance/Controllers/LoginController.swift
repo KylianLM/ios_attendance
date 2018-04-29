@@ -52,6 +52,7 @@ class LoginController: UIViewController {
         let task = ApiClient.sharedInstance.postLogin(email: nickname, password: password) { (b) in
             if b {
                 UserService.sharedInstance.storePassword(password: password)
+                // La navigation est à revoir
                 if let next = self.storyboard?.instantiateViewController(withIdentifier: "check") as? ViewController {
                         self.navigationController?.pushViewController(next, animated: false)
                 }
