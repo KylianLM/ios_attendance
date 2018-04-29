@@ -19,6 +19,7 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
         AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
             if response {
                 self.initCamera()
@@ -103,10 +104,12 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
                 let task = api.postCheckIn(data: metadataObj.stringValue!) { (data, res, err) in
                     if let httpResponse = res as? HTTPURLResponse {
                         if httpResponse.statusCode == 200 {
-                            // Change de vue
+                            UserDefaults.standard.set(true, forKey: "check")
+                            self.navigationController?.popViewController(animated: true)
                         } else {
                             // Error
-                            print("ERROR CAPTCHA")
+                            self.messageLabel.text = "Invalid captach"
+                            UserDefaults.standard.set(false, forKey: "check")
                             self.videoPreviewLayer?.session?.startRunning()
                         }
                     }

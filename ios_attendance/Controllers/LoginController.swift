@@ -17,6 +17,8 @@ class LoginController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        self.navigationItem.hidesBackButton = true
+        UserDefaults.standard.set(false, forKey: "check")
     }
     
     override func didReceiveMemoryWarning() {
@@ -50,8 +52,8 @@ class LoginController: UIViewController {
         let task = ApiClient.sharedInstance.postLogin(email: nickname, password: password) { (b) in
             if b {
                 UserService.sharedInstance.storePassword(password: password)
-                if let next = self.storyboard?.instantiateViewController(withIdentifier: "qrCode") as? QRScannerController {
-                    self.navigationController?.pushViewController(next, animated: true)
+                if let next = self.storyboard?.instantiateViewController(withIdentifier: "check") as? ViewController {
+                        self.navigationController?.pushViewController(next, animated: false)
                 }
             } else {
                 self.errorModal(title: "Login error", message: "an error occured please double check your nickname and password")
