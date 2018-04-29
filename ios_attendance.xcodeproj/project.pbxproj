@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		53247C05A98465CC1E521C77 /* Pods_ios_attendanceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 754CBD76DE833A4C23758C27 /* Pods_ios_attendanceUITests.framework */; };
+		53BAF910209619A4005E7BE3 /* BeaconService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BAF90F209619A4005E7BE3 /* BeaconService.swift */; };
+		53BAF9142096293F005E7BE3 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BAF9132096293F005E7BE3 /* LoginController.swift */; };
 		5B64C9EF2091F5F200C892F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64C9EE2091F5F200C892F8 /* AppDelegate.swift */; };
 		5B64C9F12091F5F200C892F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64C9F02091F5F200C892F8 /* ViewController.swift */; };
 		5B64C9F42091F5F200C892F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B64C9F22091F5F200C892F8 /* Main.storyboard */; };
@@ -16,11 +18,11 @@
 		5B64CA042091F5F300C892F8 /* ios_attendanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CA032091F5F300C892F8 /* ios_attendanceTests.swift */; };
 		5B64CA0F2091F5F300C892F8 /* ios_attendanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CA0E2091F5F300C892F8 /* ios_attendanceUITests.swift */; };
 		5B64CA212092093100C892F8 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CA202092093100C892F8 /* ApiConstants.swift */; };
+		5B64CA26209212E000C892F8 /* FakeApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CA25209212E000C892F8 /* FakeApiData.swift */; };
 		5B64CA2920921ECC00C892F8 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CA2820921ECC00C892F8 /* ApiClient.swift */; };
 		5B64CA2B20926BA100C892F8 /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CA2A20926BA100C892F8 /* QRScannerController.swift */; };
 		5B85462120932138003542A2 /* DateFormatterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B85462020932138003542A2 /* DateFormatterHelper.swift */; };
 		5B85462320934863003542A2 /* BeaconHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B85462220934863003542A2 /* BeaconHelper.swift */; };
-		5B854627209355C1003542A2 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B854626209355C1003542A2 /* UserService.swift */; };
 		76305BC7D08E5E559D1FF82E /* Pods_ios_attendance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EF1AD81F1655B7F2A1A75B /* Pods_ios_attendance.framework */; };
 		B783323487D7273F52541DF6 /* Pods_ios_attendanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF95454D43E38A95361F231 /* Pods_ios_attendanceTests.framework */; };
 /* End PBXBuildFile section */
@@ -49,6 +51,8 @@
 		23EF1AD81F1655B7F2A1A75B /* Pods_ios_attendance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_attendance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B8DC6FCFDAF6578EAD9978 /* Pods-ios_attendanceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_attendanceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios_attendanceTests/Pods-ios_attendanceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4D653A688067A0217C9BE2C6 /* Pods-ios_attendanceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_attendanceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios_attendanceTests/Pods-ios_attendanceTests.release.xcconfig"; sourceTree = "<group>"; };
+		53BAF90F209619A4005E7BE3 /* BeaconService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconService.swift; sourceTree = "<group>"; };
+		53BAF9132096293F005E7BE3 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		5B64C9EB2091F5F200C892F8 /* ios_attendance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_attendance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B64C9EE2091F5F200C892F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B64C9F02091F5F200C892F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,11 +67,11 @@
 		5B64CA0E2091F5F300C892F8 /* ios_attendanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_attendanceUITests.swift; sourceTree = "<group>"; };
 		5B64CA102091F5F300C892F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B64CA202092093100C892F8 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
+		5B64CA25209212E000C892F8 /* FakeApiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeApiData.swift; sourceTree = "<group>"; };
 		5B64CA2820921ECC00C892F8 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		5B64CA2A20926BA100C892F8 /* QRScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
 		5B85462020932138003542A2 /* DateFormatterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterHelper.swift; sourceTree = "<group>"; };
 		5B85462220934863003542A2 /* BeaconHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconHelper.swift; sourceTree = "<group>"; };
-		5B854626209355C1003542A2 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		754CBD76DE833A4C23758C27 /* Pods_ios_attendanceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_attendanceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CF95454D43E38A95361F231 /* Pods_ios_attendanceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_attendanceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B9F1539F720048257274EA8 /* Pods-ios_attendanceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_attendanceUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios_attendanceUITests/Pods-ios_attendanceUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +183,7 @@
 			children = (
 				5B64CA2A20926BA100C892F8 /* QRScannerController.swift */,
 				5B64C9F02091F5F200C892F8 /* ViewController.swift */,
+				53BAF9132096293F005E7BE3 /* LoginController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 		5B64CA2220920AEA00C892F8 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				5B64CA25209212E000C892F8 /* FakeApiData.swift */,
 				5B64CA202092093100C892F8 /* ApiConstants.swift */,
 			);
 			path = Constants;
@@ -213,7 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				5B64CA2820921ECC00C892F8 /* ApiClient.swift */,
-				5B854626209355C1003542A2 /* UserService.swift */,
+				53BAF90F209619A4005E7BE3 /* BeaconService.swift */,
 			);
 			path = NotServices;
 			sourceTree = "<group>";
@@ -388,12 +394,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ios_attendance/Pods-ios_attendance-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Arcane/Arcane.framework",
-				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Arcane.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -443,14 +447,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B64CA26209212E000C892F8 /* FakeApiData.swift in Sources */,
 				5B64C9F12091F5F200C892F8 /* ViewController.swift in Sources */,
-				5B854627209355C1003542A2 /* UserService.swift in Sources */,
 				5B64CA2B20926BA100C892F8 /* QRScannerController.swift in Sources */,
 				5B85462120932138003542A2 /* DateFormatterHelper.swift in Sources */,
+				53BAF910209619A4005E7BE3 /* BeaconService.swift in Sources */,
 				5B64CA212092093100C892F8 /* ApiConstants.swift in Sources */,
 				5B85462320934863003542A2 /* BeaconHelper.swift in Sources */,
 				5B64C9EF2091F5F200C892F8 /* AppDelegate.swift in Sources */,
 				5B64CA2920921ECC00C892F8 /* ApiClient.swift in Sources */,
+				53BAF9142096293F005E7BE3 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,13 +631,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8Z658FHXAJ;
+				DEVELOPMENT_TEAM = 49ZR496HYZ;
 				INFOPLIST_FILE = ios_attendance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "fr.kylianlemette.ios-attendance";
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.thibautmarsal.ios-attendance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -644,13 +650,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8Z658FHXAJ;
+				DEVELOPMENT_TEAM = 49ZR496HYZ;
 				INFOPLIST_FILE = ios_attendance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "fr.kylianlemette.ios-attendance";
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.thibautmarsal.ios-attendance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
