@@ -99,7 +99,7 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
             
             if metadataObj.stringValue != nil {
                 let api = ApiClient.sharedInstance
-                let task = api.postQRcode(data: metadataObj.stringValue!) { (data, res, err) in
+                let task = api.postCheckIn(data: metadataObj.stringValue!) { (data, res, err) in
                     // DO SOMETHING !!!
                 }
                 task?.resume()

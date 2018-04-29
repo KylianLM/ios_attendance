@@ -16,7 +16,6 @@
 		5B64CA042091F5F300C892F8 /* ios_attendanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CA032091F5F300C892F8 /* ios_attendanceTests.swift */; };
 		5B64CA0F2091F5F300C892F8 /* ios_attendanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CA0E2091F5F300C892F8 /* ios_attendanceUITests.swift */; };
 		5B64CA212092093100C892F8 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CA202092093100C892F8 /* ApiConstants.swift */; };
-		5B64CA26209212E000C892F8 /* FakeApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CA25209212E000C892F8 /* FakeApiData.swift */; };
 		5B64CA2920921ECC00C892F8 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CA2820921ECC00C892F8 /* ApiClient.swift */; };
 		5B64CA2B20926BA100C892F8 /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64CA2A20926BA100C892F8 /* QRScannerController.swift */; };
 		5B85462120932138003542A2 /* DateFormatterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B85462020932138003542A2 /* DateFormatterHelper.swift */; };
@@ -64,7 +63,6 @@
 		5B64CA0E2091F5F300C892F8 /* ios_attendanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_attendanceUITests.swift; sourceTree = "<group>"; };
 		5B64CA102091F5F300C892F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B64CA202092093100C892F8 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
-		5B64CA25209212E000C892F8 /* FakeApiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeApiData.swift; sourceTree = "<group>"; };
 		5B64CA2820921ECC00C892F8 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		5B64CA2A20926BA100C892F8 /* QRScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
 		5B85462020932138003542A2 /* DateFormatterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterHelper.swift; sourceTree = "<group>"; };
@@ -206,7 +204,6 @@
 		5B64CA2220920AEA00C892F8 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				5B64CA25209212E000C892F8 /* FakeApiData.swift */,
 				5B64CA202092093100C892F8 /* ApiConstants.swift */,
 			);
 			path = Constants;
@@ -446,7 +443,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B64CA26209212E000C892F8 /* FakeApiData.swift in Sources */,
 				5B64C9F12091F5F200C892F8 /* ViewController.swift in Sources */,
 				5B854627209355C1003542A2 /* UserService.swift in Sources */,
 				5B64CA2B20926BA100C892F8 /* QRScannerController.swift in Sources */,
@@ -631,7 +627,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Z658FHXAJ;
 				INFOPLIST_FILE = ios_attendance/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.kylianlemette.ios-attendance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -647,7 +646,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Z658FHXAJ;
 				INFOPLIST_FILE = ios_attendance/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.kylianlemette.ios-attendance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -664,7 +666,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Z658FHXAJ;
 				INFOPLIST_FILE = ios_attendanceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.kylianlemette.ios-attendanceTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -682,7 +688,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Z658FHXAJ;
 				INFOPLIST_FILE = ios_attendanceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.kylianlemette.ios-attendanceTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -699,7 +709,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Z658FHXAJ;
 				INFOPLIST_FILE = ios_attendanceUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.kylianlemette.ios-attendanceUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -716,7 +730,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Z658FHXAJ;
 				INFOPLIST_FILE = ios_attendanceUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.kylianlemette.ios-attendanceUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -8,21 +8,21 @@
 import Foundation
 
 struct ApiConstants {
-    //static let makeFake = false
 
+    // https://github.com/KylianLM/ios_attendance_nodejs_fakeApi
     struct Url {
-        static let baseApi      = "http://www.attendance.com/api/"
+        static let baseApi      = "http://localhost:8080/api/"
         struct login {
             static let url      = ApiConstants.Url.baseApi + "login"
-            static let method   = "GET"
+            static let method   = "POST"
         }
         struct refreshToken {
             static let url      = ApiConstants.Url.baseApi + "refreshToken"
-            static let method   = "GET"
+            static let method   = "POST"
         }
         struct getLocation {
             static let url      = ApiConstants.Url.baseApi + "getLocation"
-            static let method   = "GET"
+            static let method   = "POST"
         }
         struct checkIn {
             static let url      = ApiConstants.Url.baseApi + "checkIn"

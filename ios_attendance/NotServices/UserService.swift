@@ -21,14 +21,13 @@ class UserService {
                 try keychain
                     .accessibility(.whenPasscodeSetThisDeviceOnly, authenticationPolicy: .touchIDAny)
                     .set(password, key: "user_password")
-                self.getPassword()
             } catch let _ {
                 // Error handling if needed...
             }
         }
     }
     
-    func getPassword() {
+    func getPassword(handler: @escaping (String?) -> Void) {
         let keychain = Keychain(service: "com.iosattendance.www")
         print(keychain)
         DispatchQueue.global().async {
@@ -36,18 +35,22 @@ class UserService {
                 let password = try keychain
                     .authenticationPrompt("Authenticate to login to server")
                     .get("user_password")
-
+                handler(password)
             } catch let _ {
                 // Error handling if needed...
             }
         }
     }
     
-    func store(token: String) {
+    func storeToken(token: String) {
         let keychain = Keychain(service: "com.iosattendance.www")
         
         keychain["user_token"] = token
+    }
+    
+    func getToken() -> String? {
+        let keychain = Keychain(service: "com.iosattendance.www")
         
-        print(keychain)
+        return keychain["user_token"]
     }
 }
