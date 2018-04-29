@@ -46,7 +46,7 @@ class BeaconService: NSObject, CLLocationManagerDelegate {
     {
         var beaconData = [UInt32]()
         for beacon in self.beacons {
-            beaconData.append(UInt32(BeaconHelper.get32UInt(major: UInt16(beacon.minor), minor: UInt16(beacon.major))))
+            beaconData.append(UInt32(BeaconHelper.get32UInt(major: UInt16(truncating: beacon.minor), minor: UInt16(truncating: beacon.major))))
         }
         return beaconData
     }

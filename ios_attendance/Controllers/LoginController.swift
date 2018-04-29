@@ -47,11 +47,17 @@ class LoginController: UIViewController {
     }
     
     fileprivate func login (nickname: String, password: String) {
-
+        let task = ApiClient.sharedInstance.postLogin(email: nickname, password: password) { (b) in
+            if b {
+                UserService.sharedInstance.storePassword(password: password)
                 if let next = self.storyboard?.instantiateViewController(withIdentifier: "qrCode") as? QRScannerController {
                     self.navigationController?.pushViewController(next, animated: true)
                 }
-
+            } else {
+                self.errorModal(title: "Login error", message: "an error occured please double check your nickname and password")
+            }
+        }
+        task.resume()
     }
 
 }

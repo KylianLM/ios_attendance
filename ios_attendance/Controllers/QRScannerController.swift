@@ -98,9 +98,18 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
+                videoPreviewLayer?.session?.stopRunning()
                 let api = ApiClient.sharedInstance
                 let task = api.postCheckIn(data: metadataObj.stringValue!) { (data, res, err) in
-                    // DO SOMETHING !!!
+                    if let httpResponse = res as? HTTPURLResponse {
+                        if httpResponse.statusCode == 200 {
+                            // Change de vue
+                        } else {
+                            // Error
+                            print("ERROR CAPTCHA")
+                            self.videoPreviewLayer?.session?.startRunning()
+                        }
+                    }
                 }
                 task?.resume()
                 

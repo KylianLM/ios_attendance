@@ -52,7 +52,7 @@ class ApiClient {
         if let token = getUserToken() {
             let o: [String: Any] = ["QRCodeData": data,
                                     "date": Formatter.iso8601.string(from: Date()),
-                                    "beaconCollection": [],
+                                    "beaconCollection":BeaconService.sharedInstance.getBeaconsIn32(),
                                     "token": token]
             let dataOut = try? JSONSerialization.data(withJSONObject: o)
             let u = URL(string: ApiConstants.Url.checkIn.url)
