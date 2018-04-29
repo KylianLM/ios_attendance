@@ -136,7 +136,7 @@
                                 <rect key="frame" x="47" y="112" width="280" height="443"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checked.png" translatesAutoresizingMaskIntoConstraints="NO" id="Imn-aq-QqT">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checked" translatesAutoresizingMaskIntoConstraints="NO" id="Imn-aq-QqT">
                                         <rect key="frame" x="62" y="50" width="157" height="167"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -161,6 +161,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="checked.png" width="512" height="512"/>
+        <image name="checked" width="512" height="512"/>
     </resources>
 </document>
